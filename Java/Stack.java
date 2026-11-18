@@ -27,7 +27,7 @@ public class Stack {
         }
         stack[++top] = value;
         pushes++;
-        notify();
+        notifyAll();
     }
 
     public synchronized int pop() {
@@ -41,7 +41,7 @@ public class Stack {
         }
         int temp = stack[top--];
         pops++;
-        notify();
+        notifyAll();
         return temp;
     }
 
